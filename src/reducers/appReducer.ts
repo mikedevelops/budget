@@ -3,7 +3,10 @@ import { Action } from 'redux';
 const app = (state: {}, action: Action): {} => {
     switch (action.type) {
         default:
-            return {};
+            return {
+                targetCurrency: '£',
+                targetValue: 0
+            };
     }
 };
 

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmountComponent Should render an amount component 1`] = `
+<p>
+  $
+  666
+</p>
+`;
