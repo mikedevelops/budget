@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { AmountComponentPropsInterface } from '../interfaces/AmountComponent';
+import { IAmountComponentPropsInterface } from '../interfaces/AmountComponent';
 
-const Target: React.SFC<AmountComponentPropsInterface> = ({
+const AmountComponent: React.SFC<IAmountComponentPropsInterface> = ({
     currency,
     value
 }) => {
-    return <p>{ currency }{ value }</p>
-}
+    return <p className="amount">{ currency }{ value }</p>;
+};
 
-export default Target;
+export default AmountComponent;

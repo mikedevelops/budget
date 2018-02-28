@@ -1,6 +1,6 @@
 import { IFigureDictionary } from './Figure';
 
-export interface IDashboardComponentProps {
+export interface IDefaultState {
     mode: 'edit'|'presentation';
     entries: IFigureDictionary[];
 }

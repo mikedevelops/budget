@@ -1,3 +1,7 @@
-10/2/2018
+11/2/2018
 
-- Calculate estimated target date based on existing savings and projected savings
+- Create Amount component √
+
+12/2/2018
+
+- Create savings per month (this should be configurable to day, year)

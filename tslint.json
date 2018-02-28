@@ -7,9 +7,12 @@
     "rules": {
         "quotemark": [true, "single", "jsx-double"],
         "space-before-function-paren": [false],
-        "interface-name": [false],
         "ordered-imports": [false],
-        "trailing-comma": [false]
+        "trailing-comma": [false],
+        "object-literal-sort-keys": [false],
+        "no-unused-expression": [true],
+        "no-unused-variable": [true],
+        "no-string-literal": [false]
     },
     "rulesDirectory": []
 }

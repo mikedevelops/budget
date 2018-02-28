@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderCurrencyWidget should render a currency widget 1`] = `
+<div
+  className="widget widget--currency"
+>
+  <div
+    className="labelled-figure"
+  >
+    <div
+      className="labelled-figure__label"
+    >
+      <p>
+        test_currency
+      </p>
+    </div>
+    <p
+      className="amount"
+    >
+      £
+      666
+    </p>
+  </div>
+</div>
+`;

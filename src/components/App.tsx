@@ -7,12 +7,12 @@ import appReducer from '../reducers/appReducer';
 
 const store = createStore(appReducer);
 
-export default class App extends React.Component {
+export default class App extends React.Component<any, any> {
     public render () {
         return (
             <Provider store={store}>
                 <DashboardContainer/>
             </Provider>
-        )
+        );
     }
 }

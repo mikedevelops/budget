@@ -5,12 +5,11 @@ import App from './components/App';
 import appReducer from './reducers/appReducer';
 import { createStore } from 'redux';
 
-const root = document.getElementById('root');
 const store = createStore(appReducer);
 
 render(
     <Provider store={store}>
         <App/>
     </Provider>,
-    root
+    document.getElementById('root')
 );

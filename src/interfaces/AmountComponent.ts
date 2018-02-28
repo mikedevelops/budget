@@ -1,4 +1,4 @@
-export interface AmountComponentPropsInterface {
+export interface IAmountComponentPropsInterface {
     currency: string;
     value: number;
 }

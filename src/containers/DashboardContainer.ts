@@ -1,16 +1,22 @@
-import { connect } from 'react-redux';
+import { connect, Dispatch } from 'react-redux';
 import DashboardComponent from '../components/DashboardComponent';
-import { DashboardComponentProps } from '../interfaces/DashboardComponent';
+import { IDashboardComponentProps } from '../interfaces/DashboardComponent';
+import { IDefaultState } from '../interfaces/DefaultState';
 
-const mapStateToProps = (state: any): DashboardComponentProps => {
+const mapStateToProps = (state: IDefaultState): any => {
     return {
-        targetCurrency: state.targetCurrency,
-        targetValue: state.targetValue
+        mode: state.mode,
+        entries: state.entries
     };
-}
+};
+
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+
+});
 
 const DashboardContainer = connect(
-    mapStateToProps
-)(DashboardComponent);
+    mapStateToProps,
+    mapDispatchToProps
+)(DashboardComponent) as any;
 
 export default DashboardContainer;
