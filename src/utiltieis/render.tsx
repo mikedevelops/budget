@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Figure, ICurrencyFigure } from '../interfaces/Figure';
-import LabelledFigureComponent from '../components/LabelledFigureComponent';
-import AmountComponent from '../components/AmountComponent';
+import LabelledFigureComponent from '../components/figure/LabelledFigureComponent';
+import AmountComponent from '../components/amount/AmountComponent';
 
 export function renderCurrencyWidget (
     label: string,

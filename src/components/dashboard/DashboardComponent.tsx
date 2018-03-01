@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IDashboardComponentProps } from '../interfaces/DashboardComponent';
+import { IDashboardComponentProps } from './DashboardComponentInterface';
 import PresentationDashboardComponent from './PresentationDashboardComponent';
 
 const DashboardComponent: React.SFC<IDashboardComponentProps> = ({

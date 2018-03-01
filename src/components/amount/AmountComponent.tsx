@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IAmountComponentPropsInterface } from '../interfaces/AmountComponent';
+import { IAmountComponentPropsInterface } from './AmountComponentInterface';
 
 const AmountComponent: React.SFC<IAmountComponentPropsInterface> = ({
     currency,

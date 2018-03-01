@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { IPresentationDashboardComponentProps } from '../interfaces/PresentationDashboardComponent';
-import { getCumulativeEntries } from '../utiltieis/entries';
-import { renderPresentationWidget } from '../utiltieis/render';
-import LabelledFigureComponent from './LabelledFigureComponent';
+import { IPresentationDashboardComponentProps } from './PresentationDashboardComponentInterface';
+import { getCumulativeEntries } from '../../utiltieis/entries';
+import { renderPresentationWidget } from '../../utiltieis/render';
+import LabelledFigureComponent from '../figure/LabelledFigureComponent';
 
 const PresentationDashboardComponent: React.SFC<IPresentationDashboardComponentProps> = ({
     entries
@@ -25,8 +25,10 @@ const PresentationDashboardComponent: React.SFC<IPresentationDashboardComponentP
 
     return (
         <div className="presentation-dashboard">
+            <h1>Presentation Dashboard</h1>
             { renderedWidgets }
             <hr/>
+            <h1>Custom Widgets</h1>
             { totalMonths() }
         </div>
     );

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ILabelledFigureComponentProps } from '../interfaces/LabelledFigureComponent';
+import { ILabelledFigureComponentProps } from './LabelledFigureComponentInterface';
 
 const LabelledFigureComponent: React.SFC<ILabelledFigureComponentProps> = ({
     label,

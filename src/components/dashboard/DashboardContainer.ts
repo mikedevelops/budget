@@ -1,11 +1,9 @@
 import { connect, Dispatch } from 'react-redux';
-import DashboardComponent from '../components/DashboardComponent';
-import { IDashboardComponentProps } from '../interfaces/DashboardComponent';
-import { IDefaultState } from '../interfaces/DefaultState';
+import { IDefaultState } from '../../interfaces/DefaultState';
+import DashboardComponent from './DashboardComponent';
 
 const mapStateToProps = (state: IDefaultState): any => {
     return {
-        mode: state.mode,
         entries: state.entries
     };
 };
