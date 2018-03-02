@@ -13,15 +13,15 @@ const PresentationDashboardComponent: React.SFC<IPresentationDashboardComponentP
     });
 
     // Custom widget calculation example
-    const totalMonths = () => {
-        const value = cumulativeWidgets['target'].value / cumulativeWidgets['saving per month'].value;
+    // const totalMonths = () => {
+    //     const value = cumulativeWidgets['target'].value / cumulativeWidgets['saving per month'].value;
 
-        return (
-            <LabelledFigureComponent label="Remaining months">
-                <p>{ value }</p>
-            </LabelledFigureComponent>
-        );
-    };
+    //     return (
+    //         <LabelledFigureComponent label="Remaining months">
+    //             <p>{ value }</p>
+    //         </LabelledFigureComponent>
+    //     );
+    // };
 
     return (
         <div className="presentation-dashboard">
@@ -29,7 +29,6 @@ const PresentationDashboardComponent: React.SFC<IPresentationDashboardComponentP
             { renderedWidgets }
             <hr/>
             <h1>Custom Widgets</h1>
-            { totalMonths() }
         </div>
     );
 };

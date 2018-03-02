@@ -3,21 +3,11 @@ import { IDashboardComponentProps } from './DashboardComponentInterface';
 import PresentationDashboardComponent from './PresentationDashboardComponent';
 
 const DashboardComponent: React.SFC<IDashboardComponentProps> = ({
-    mode,
     entries
 }) => {
-    let dashboard;
-
-    switch (mode) {
-        case 'presentation':
-            dashboard = <PresentationDashboardComponent
-                entries={entries}
-            />;
-    }
-
     return (
         <div className="dashboard">
-            { dashboard }
+            <PresentationDashboardComponent entries={entries} />;
         </div>
     );
 };
