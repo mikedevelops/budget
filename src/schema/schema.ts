@@ -1,7 +1,7 @@
-import { currencyEntrySchema } from './currencyEntrySchema';
-import { dateEntrySchema } from './dateEntrySchema';
+import { currencyWidgetSchema } from './currencyWidgetSchema';
+import { dateWidgetSchema } from './dateWidgetSchema';
 
 export const schema = [
-    currencyEntrySchema,
-    dateEntrySchema
+    currencyWidgetSchema,
+    dateWidgetSchema
 ];

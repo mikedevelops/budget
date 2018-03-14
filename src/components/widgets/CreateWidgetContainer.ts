@@ -1,13 +1,11 @@
 import { IDefaultState } from '../../interfaces/DefaultState';
-import CreateSchemaComponent, { ICreateSchemaComponentProps } from './CreateSchemaComponent';
+import CreateSchemaComponent, { ICreateWidgetComponentProps } from './CreateWidgetComponent';
 import { Dispatch, connect } from 'react-redux';
-import { EntrySchema } from '../../interfaces/Schema';
-import { updateSchema } from './schemaActions';
+import { WidgetSchema } from '../../interfaces/Schema';
+import { updateSchema } from './createWidgetActions';
 import { ISerializedForm } from '../../utiltieis/formSerializer';
 
 const mapStateToProps = (state: any): any => {
-    console.log(state)
-
     return {
         schema: state.schema.schema
     };

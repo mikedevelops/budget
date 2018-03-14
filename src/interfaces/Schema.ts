@@ -1,6 +1,6 @@
-export type EntrySchema = ICurrencyEntrySchema | IDateEntrySchema;
+export type WidgetSchema = ICurrencyWidgetSchema | IDateWidgetSchema;
 
-export interface ICurrencyEntrySchema {
+export interface ICurrencyWidgetSchema {
     type: 'CURRENCY';
     value: 'INT';
     currency: ['£'];
@@ -9,7 +9,7 @@ export interface ICurrencyEntrySchema {
     name: string;
 }
 
-export interface IDateEntrySchema {
+export interface IDateWidgetSchema {
     type: 'DATE';
     value: 'DATE';
     label: 'Date';

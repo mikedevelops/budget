@@ -1,25 +1,25 @@
 import * as React from 'react';
-import { EntrySchema, ICurrencyEntrySchema, IDateEntrySchema } from '../../interfaces/Schema';
+import { WidgetSchema, ICurrencyWidgetSchema, IDateWidgetSchema } from '../../interfaces/Schema';
 import FormControlComponent from '../form/FormControlComponent';
 import InputComponent from '../form/InputComponent';
 import { ChangeEvent, FormEvent, SyntheticEvent } from 'react';
 import { serialize, ISerializedForm } from '../../utiltieis/formSerializer';
 
-export interface ICreateSchemaComponentProps {
-    schema: EntrySchema[];
+export interface ICreateWidgetComponentProps {
+    schema: WidgetSchema[];
     handleSubmit: (schema: ISerializedForm) => void;
 }
 
-interface ICreateSchemaComponentState {
+interface ICreateWidgetComponentState {
     activeSchema: string;
 }
 
-function createCurrencySchemaInput (
+function createCurrencyWidgetInput (
     label: JSX.Element,
-    schema: ICurrencyEntrySchema
+    schema: ICurrencyWidgetSchema
 ): JSX.Element {
     return (
-        <div key={schema.label} className="create-currency-schema-controls">
+        <div key={schema.label} className="create-currency-widget-controls">
             { label }
             <FormControlComponent name={`${schema.label}_type`} label={schema.label}>
                 <InputComponent name={`${schema.label}_currency`} options={schema.currency} type="SELECT_SINGLE"/>
@@ -29,9 +29,9 @@ function createCurrencySchemaInput (
     );
 }
 
-function createDateSchemaInput (
+function createDateWidgetInput (
     label: JSX.Element,
-    schema: IDateEntrySchema
+    schema: IDateWidgetSchema
 ): JSX.Element {
     return (
         <div key={schema.label} className="create-date-schema-controls">
@@ -44,8 +44,8 @@ function createDateSchemaInput (
     );
 }
 
-function createSchemaInput (
-    schema: EntrySchema
+function createWidgetInput (
+    schema: WidgetSchema
 ): JSX.Element {
     const label = (
         <FormControlComponent name={`${schema.label}_name`} label="label">
@@ -55,14 +55,14 @@ function createSchemaInput (
 
     switch (schema.type) {
         case 'CURRENCY':
-            return createCurrencySchemaInput(label, schema);
+            return createCurrencyWidgetInput(label, schema);
         case 'DATE':
-            return createDateSchemaInput(label, schema);
+            return createDateWidgetInput(label, schema);
     }
 }
 
-class CreateSchemaComponent extends React.Component<ICreateSchemaComponentProps, ICreateSchemaComponentState> {
-    constructor (props: ICreateSchemaComponentProps) {
+class CreateSchemaComponent extends React.Component<ICreateWidgetComponentProps, ICreateWidgetComponentState> {
+    constructor (props: ICreateWidgetComponentProps) {
         super(props);
 
         this.state = {
@@ -71,17 +71,17 @@ class CreateSchemaComponent extends React.Component<ICreateSchemaComponentProps,
     }
 
     public render () {
-        const schemaInput = this.state.activeSchema && createSchemaInput(
+        const schemaInput = this.state.activeSchema && createWidgetInput(
             this.props.schema.find((s) => s.label === this.state.activeSchema));
         const submit = <button>Save</button>;
 
         return (
-            <form className="create-schema-form" onSubmit={this.handleSubmit.bind(this)}>
-                <FormControlComponent name="create-schema" label="Choose widget">
+            <form className="create-widget-form" onSubmit={this.handleWidgetSubmit.bind(this)}>
+                <FormControlComponent name="create-widget" label="Choose widget">
                     <InputComponent
                         type="SELECT_SINGLE"
-                        name="schema"
-                        onChange={this.handleSchemaChange.bind(this)}
+                        name="widget"
+                        onChange={this.handleWidgetInputChange.bind(this)}
                         options={['', ...this.props.schema.map((s) => s.label)]}/>
                 </FormControlComponent>
                 { schemaInput }
@@ -90,11 +90,11 @@ class CreateSchemaComponent extends React.Component<ICreateSchemaComponentProps,
         );
     }
 
-    private handleSchemaChange (event: ChangeEvent<HTMLSelectElement>) {
+    private handleWidgetInputChange (event: ChangeEvent<HTMLSelectElement>) {
         this.setState({ activeSchema: event.target.value });
     }
 
-    private handleSubmit (event: SyntheticEvent<EventTarget>) {
+    private handleWidgetSubmit (event: SyntheticEvent<EventTarget>) {
         const data = serialize(new FormData(event.target as HTMLFormElement));
 
         event.preventDefault();

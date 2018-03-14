@@ -1,4 +1,4 @@
-import { EntrySchema } from '../../interfaces/Schema';
+import { WidgetSchema } from '../../interfaces/Schema';
 import { ISerializedForm } from '../../utiltieis/formSerializer';
 
 export interface IUpdateSchemaAction {

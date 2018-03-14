@@ -1,6 +1,6 @@
-import { ICurrencyEntrySchema } from '../interfaces/Schema';
+import { ICurrencyWidgetSchema } from '../interfaces/Schema';
 
-export const currencyEntrySchema: ICurrencyEntrySchema = {
+export const currencyWidgetSchema: ICurrencyWidgetSchema = {
     type: 'CURRENCY',
     value: 'INT',
     currency: ['£'],

@@ -1,7 +1,7 @@
 import { Reducer, AnyAction } from 'redux';
 import { schema } from '../../schema/schema';
-import { IUpdateSchemaAction } from './schemaActions';
-import { EntrySchema } from '../../interfaces/Schema';
+import { IUpdateSchemaAction } from './createWidgetActions';
+import { WidgetSchema } from '../../interfaces/Schema';
 
 const defaultState: any = {
     schema,
