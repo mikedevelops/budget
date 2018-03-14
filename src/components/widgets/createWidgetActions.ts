@@ -1,14 +1,14 @@
 import { WidgetSchema } from '../../interfaces/Schema';
 import { ISerializedForm } from '../../utiltieis/formSerializer';
 
-export interface IUpdateSchemaAction {
-    type: 'UPDATE_SCHEMA';
+export interface ICreateWidgetAction {
+    type: 'CREATE_WIDGET';
     formData: ISerializedForm;
 }
 
-export const updateSchema = (formData: ISerializedForm): IUpdateSchemaAction => {
+export const createWidgetAction = (formData: ISerializedForm): ICreateWidgetAction => {
     return {
-        type: 'UPDATE_SCHEMA',
+        type: 'CREATE_WIDGET',
         formData
     };
 };

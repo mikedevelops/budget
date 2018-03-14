@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import AmountComponent from '../../src/components/AmountComponent';
+import AmountComponent from '../../../src/components/amount/AmountComponent';
 
 describe('AmountComponent', () => {
     test('Should render an amount component', () => {

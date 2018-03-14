@@ -2,8 +2,8 @@ import { IDefaultState } from '../../interfaces/DefaultState';
 import CreateSchemaComponent, { ICreateWidgetComponentProps } from './CreateWidgetComponent';
 import { Dispatch, connect } from 'react-redux';
 import { WidgetSchema } from '../../interfaces/Schema';
-import { updateSchema } from './createWidgetActions';
 import { ISerializedForm } from '../../utiltieis/formSerializer';
+import { createWidgetAction } from './createWidgetActions';
 
 const mapStateToProps = (state: any): any => {
     return {
@@ -14,7 +14,7 @@ const mapStateToProps = (state: any): any => {
 const mapDispatchToProps = (dispatch: Dispatch<any>) => {
     return {
         handleSubmit: (formData: ISerializedForm) => {
-            dispatch(updateSchema(formData));
+            dispatch(createWidgetAction(formData));
         }
     };
 };

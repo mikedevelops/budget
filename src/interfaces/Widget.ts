@@ -3,3 +3,9 @@ export interface ICurrencyWidgetSchema {
     value: 'INT';
     currency: 'STRING';
 }
+
+export interface ICurrencyWidget {
+    type: string;
+    currency: string;
+    value: number;
+}
