@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createWidgetReducer UPDATE_SCHEMA should throw an error if the schema does not have a blueprint 1`] = `"received is not a function"`;
+exports[`createWidgetReducer CREATE_WIDGET should throw an error if the payload does not have a widget 1`] = `"\\"CREATE_WIDGET\\" payload must contain a \\"widget\\" property"`;
+
+exports[`createWidgetReducer CREATE_WIDGET should throw an error if the payload widget does not have a blueprint 1`] = `"Could not find schema for \\"A_WIDGET_THAT_DOES_NOT_EXIST\\""`;
